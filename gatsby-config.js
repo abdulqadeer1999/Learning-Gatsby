@@ -1,11 +1,15 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
+
 module.exports = {
     plugins: [
         {
             resolve: `gatsby-source-contentful`,
             options: {
-              spaceId: `32ed0thznqrd`,
+              spaceId:process.env.CONTENTFUL_SPACE_ID,
               // Learn about environment variables: https://gatsby.dev/env-vars
-              accessToken:"8CcY34Or4sLeOuNMBmRDfKq7o_NCnIokeA7ES_r5idM",
+              accessToken:process.env.CONTENTFUL_ACCESS_TOKEN,
             },
           },
     ]
